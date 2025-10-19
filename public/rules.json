@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Set-Cookie",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "<all_urls>",
+      "resourceTypes": ["main_frame"],
+      "domains": ["*://*/*"],
+      "excludeDomains": ["localhost", "127.0.0.1", "[::1]"]
+    }
+  }
+]

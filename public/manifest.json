@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "AdCracker Extension",
+  "version": "0.2.0",
+  "icons": {
+    "128": "images/final.png"
+  },
+  "description": "A free ads and tracker blocking extension",
+  "author": "Binary Wizard",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "128": "images/final.png"
+    }
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "declarativeNetRequestWithHostAccess",
+    "scripting"
+  ],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "block_third_party_cookies",
+        "enabled": true,
+        "path": "rules.json"
+      },
+      {
+        "id": "easylist",
+        "enabled": true,
+        "path": "easylist.json"
+      },
+      {
+        "id": "interstitial_ads",
+        "enabled": true,
+        "path": "interstitial_ads.json"
+      }
+    ]
+  }
+}
