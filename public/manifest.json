@@ -1,23 +1,24 @@
 {
   "manifest_version": 3,
-  "name": "AdCracker Extension",
+  "name": "Adcrusher Extension",
   "version": "0.2.0",
   "icons": {
-    "128": "images/final.png"
+    "128": "images/fav-icon.png"
   },
   "description": "A free ads and tracker blocking extension",
   "author": "Binary Wizard",
   "action": {
     "default_popup": "index.html",
     "default_icon": {
-      "128": "images/final.png"
+      "128": "images/fav-icon.png"
     }
   },
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestFeedback",
     "declarativeNetRequestWithHostAccess",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "host_permissions": ["*://*/*"],
   "background": {
